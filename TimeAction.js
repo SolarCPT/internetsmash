@@ -5,9 +5,9 @@
      var currentHour = currentDate.getHours();
      var currentMinute = currentDate.getMinutes();
      var currentSecond = currentDate.getSeconds();
-     currentHour = currentHour % 12;
+     /*currentHour = currentHour % 12;
      currentHour= currentHour ? currentHour : 12; // the hour '0' should be '12'
-     var ampm=currentHour <= 12 ? 'PM' : 'AM';
+     var ampm=currentHour <= 12 ? 'PM' : 'AM';*/
      currentMinute = currentMinute < 10 ? '0'+currentMinute : currentMinute;
      currentSecond = currentSecond <10 ? '0'+currentSecond : currentSecond;
      document.getElementById('timeDiv').innerHTML = currentHour + ':' + currentMinute + ' : ' + currentSecond+' '+ampm;
