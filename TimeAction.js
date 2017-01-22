@@ -11,7 +11,7 @@
      currentMinute = currentMinute < 10 ? '0'+currentMinute : currentMinute;
      currentSecond = currentSecond <10 ? '0'+currentSecond : currentSecond;
      document.getElementById('timeDiv').innerHTML =currentHour + ':' + currentMinute + ' : ' + currentSecond;
-     t=setTimeout(function(){displayTime()},500);
+     t=setTimeout(function(){displayTime()},1000);
     }
 function ShopStatus(msg,work=0){
      var msg="<b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(255, 0, 29);\">"+msg+"</span><span style=\"color:red;\"><b> !!</b></span>";
