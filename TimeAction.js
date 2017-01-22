@@ -10,7 +10,7 @@
      //var ampm=currentHour <= 12 ? 'PM' : 'AM';
      currentMinute = currentMinute < 10 ? '0'+currentMinute : currentMinute;
      currentSecond = currentSecond <10 ? '0'+currentSecond : currentSecond;
-     document.getElementById('timeDiv').innerHTML = currentHour + ':' + currentMinute + ' : ' + currentSecond;
+     document.getElementById('timeDiv').innerHTML ="<b>Local Time: </b>"currentHour + ':' + currentMinute + ' : ' + currentSecond;
      t=setTimeout(function(){displayTime()},500);
     }
 function ShopStatus(msg,work=0){
