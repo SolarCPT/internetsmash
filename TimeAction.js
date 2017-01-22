@@ -24,7 +24,6 @@ function ShopStatus(msg,work=0){
      var currentSecond = currentDate.getSeconds();
  if(currentHour > 12)
      currentHour = currentHour % 12;
-    document.write(currentHour);
  if(currentHour <= 12)
     currentHour = currentHour;
      currentHour= currentHour ? currentHour : 12; // the hour '0' should be '12'
