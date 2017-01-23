@@ -30,13 +30,14 @@ function ShopStatus(msg,work=0){
   if(minute < 10) {
     minute = "0" + minute;
   }
-  if(amPM =="am" && hour > 8){
+   if(amPM =="am" && hour > 8){
     document.write(act);
-  }else{
+  }else if(amPM == "am" && hour < 9){
     document.write(unact);
-  }
-  if(amPM == "pm" && hour < 7){
+  }else if(amPM == "pm" && hour < 7){
     document.write(act);
+  }else if(amPM == "pm" && hour > 6){
+    document.write(unact);
   }
  }
    //]]>
