@@ -37,6 +37,8 @@ function ShopStatus(msg,work=0){
      document.write(act);
      }else if(amPM == "am" && hour < 9){
      document.write(unact);
+     }else if(amPM == "pm" && hour > 11){
+      document.write(act);
      }else if(amPM == "pm" && hour < 7){
      document.write(act);
      }else if(amPM == "pm" && hour > 6){
