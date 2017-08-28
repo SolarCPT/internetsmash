@@ -25,7 +25,6 @@ function ShopStatus(msg,YourMessage,work=0){
      var msg="Now Close!! ";
      var Newmsg="<b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(255, 0, 29);\">"+msg+"<br/>"+YourMessage+"</span><span style=\"color:red;\"></span>";
         document.write(Newmsg);
-     }
      }else{
      if(hour > 12) {
      hour -= 12;
