@@ -13,11 +13,7 @@
      document.getElementById('timeDiv').innerHTML =currentHour + ':' + currentMinute + ' : ' + currentSecond;
      t=setTimeout(function(){displayTime()},700);
     }
-function ShopStatus(msg,YourMessage,work=0){
-     if(msg == "MSG"){
-     var msg="Now Close!!";
-     var Newmsg="<b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(255, 0, 29);\">"+msg+" "+YourMessage+"</span><span style=\"color:red;\"></span>";
-     }
+function ShopStatus(YourMessage,work=0){
      var work=work;
      var act ="<b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(0, 100, 255);>\">Today Open</span><span style=\"color:rgb(0, 206, 0);\"><b> !!</b></span>";
      var unact ="<b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(255, 0, 29);\">Now Closed</span><span style=\"color:red;\"><b> !!</b></span>";
@@ -26,7 +22,10 @@ function ShopStatus(msg,YourMessage,work=0){
      var minute = date_obj.getMinutes();
      var amPM   = (hour > 11) ? "pm" : "am";
      if(work==1){
+     var msg="Now Close!!";
+     var Newmsg="<b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(255, 0, 29);\">"+msg+" "+YourMessage+"</span><span style=\"color:red;\"></span>";
         document.write(Newmsg);
+     }
      }else{
      if(hour > 12) {
      hour -= 12;
