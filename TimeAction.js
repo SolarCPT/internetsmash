@@ -22,9 +22,9 @@ function ShopStatus(YourMessage,work=0){
      var minute = date_obj.getMinutes();
      var amPM   = (hour > 11) ? "pm" : "am";
      if(work==1){
-     var msg="Now Close!!";
+     var msg="Now Close!! ";
      var Newmsg="<b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(255, 0, 29);\">"+YourMessage+"</span><span style=\"color:red;\"></span>";
-        document.write("Now Close!!"+Newmsg);
+        document.write(msg+Newmsg);
      }
      }else{
      if(hour > 12) {
