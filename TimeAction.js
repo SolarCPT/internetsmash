@@ -14,8 +14,10 @@
      t=setTimeout(function(){displayTime()},700);
     }
 function ShopStatus(msg,YourMessage,work=0){
-     if(msg == "MSG")msg="Now Close!!";
+     if(msg == "MSG"){
+     var msg="Now Close!!";
      var Newmsg="<b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(255, 0, 29);\">"+msg+" "+YourMessage+"</span><span style=\"color:red;\"></span>";
+     }
      var work=work;
      var act ="<b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(0, 100, 255);>\">Today Open</span><span style=\"color:rgb(0, 206, 0);\"><b> !!</b></span>";
      var unact ="<b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(255, 0, 29);\">Now Closed</span><span style=\"color:red;\"><b> !!</b></span>";
