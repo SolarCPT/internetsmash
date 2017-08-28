@@ -21,8 +21,9 @@ function ShopStatus(msg,YourMessage,work=0){
      var hour   = date_obj.getHours();
      var minute = date_obj.getMinutes();
      var amPM   = (hour > 11) ? "pm" : "am";
-     if(msg==" " && work==1 ){
-     var msg="Now Close!! ";
+     if(msg == " "){
+             msg="Now Close!! ";
+     }else if(work == 1){
      var Newmsg="<b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(255, 0, 29);\">"+msg+"<br/>"+YourMessage+"</span><span style=\"color:red;\"></span>";
         document.write(Newmsg);
      }else{
