@@ -32,13 +32,10 @@
      if(hour > 11) {
      hour -= 12;
      }if(hour == 0){
-      hour = 12;
-         }
-         else if(amPM=="am" && hour == 0) {
-      document.write(unact);
-     }else if(amPM =="am" && hour > 8 && hour < 12){
+      hour = "12";
+     }else if(amPM =="am" && hour > 8){
      document.write(act);
-     }else if(amPM == "pm" && hour >6 && hour < 12 ){
+     }else if(amPM == "pm" && hour > 6){
      document.write(unact);
      }
       
