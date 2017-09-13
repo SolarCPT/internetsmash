@@ -21,20 +21,21 @@ function ShopStatus(msg,YourMessage,work=0){
      var date_obj = new Date();
      var hour   = date_obj.getHours();
      var minute = date_obj.getMinutes();
-     var amPM   = (hour >=12) ? "pm" : "am";
+     var amPM   = (hour > 11) ? "pm" : "am";
      if(work == 1){
         var Nmsg=msg;
         var Newmsg="<b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(255, 0, 29);\">"+Nmsg+"<br/>"+YourMessage+"</span><span style=\"color:red;\"></span>";
         document.write(Newmsg);
      }else{
-     if(hour > 12) {
+     if(hour > 11) {
      hour -= 12;
-     }else if(hour == 0) {
-     hour = 12;
-     document.write(unact);
+     }else if(amPM=="am" && hour == 0) {
+      document.write(unact);
      }else if(amPM =="am" && hour > 8){
      document.write(act);
-     }else if(amPM == "pm" && hour > 6){
+     }else{
+      document.write(unact);
+     }else if(amPM == "pm" && hour >=7 ){
      document.write(unact);
      }
       
