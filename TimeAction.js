@@ -23,7 +23,7 @@
      var date_obj = new Date();
      var hour   = date_obj.getHours();
      var minute = date_obj.getMinutes();
-     var amPM   = (hour > 11) ? "pm" : "am";
+     var amPM   = (hour <= 11) ? "am" : "pm";
      if(work == 1){
         var Nmsg=msg;
         var Newmsg="<b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(255, 0, 29);\">"+Nmsg+"<br/>"+YourMessage+"</span><span style=\"color:red;\"></span>";
