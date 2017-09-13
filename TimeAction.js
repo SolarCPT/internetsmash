@@ -29,13 +29,14 @@ function ShopStatus(msg,YourMessage,work=0){
      }else{
      if(hour > 11) {
      hour -= 12;
-     }else if(amPM=="am" && hour == 0) {
+     }if(hour == 0){
+      hour = 12;
+         }
+         else if(amPM=="am" && hour == 0) {
       document.write(unact);
-     }else if(amPM =="am" && hour > 8){
+     }else if(amPM =="am" && hour > 8 && hour < 12){
      document.write(act);
-     }else{
-      document.write(unact);
-     }else if(amPM == "pm" && hour >=7 ){
+     }else if(amPM == "pm" && hour >6 && hour < 12 ){
      document.write(unact);
      }
       
