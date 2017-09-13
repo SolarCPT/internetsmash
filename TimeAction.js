@@ -32,7 +32,7 @@ function ShopStatus(msg,YourMessage,work=0){
      }else if(hour == 12){
       hour = 12;
      }else if(hour == 0) {
-     hour = "12";
+     hour = 12;
      }
      if(minute < 10) {
      minute = "0" + minute;
@@ -45,6 +45,8 @@ function ShopStatus(msg,YourMessage,work=0){
      document.write(act);
      }else if(amPM == "pm" && hour > 6){
      document.write(unact);
+     }else if(amPM == "pm" && hour == 12){
+       document.write(act);
      }
  }
      }
