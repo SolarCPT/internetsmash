@@ -1,21 +1,5 @@
 
-     
- function displayTime()
- //<![CDATA[
-    {
-     var currentDate = new Date();
-     var currentHour = currentDate.getHours();
-     var currentMinute = currentDate.getMinutes();
-     var currentSecond = currentDate.getSeconds();
-     //currentHour = currentHour % 12;
-     //currentHour= currentHour ? currentHour : 12; // the hour '0' should be '12'
-     //var ampm=currentHour <= 12 ? 'PM' : 'AM';
-     currentMinute = currentMinute < 10 ? '0'+currentMinute : currentMinute;
-     currentSecond = currentSecond <10 ? '0'+currentSecond : currentSecond;
-     document.getElementById('timeDiv').innerHTML =currentHour + ':' + currentMinute + ' : ' + currentSecond;
-     t=setTimeout(function(){displayTime()},700);
-    }
- function ShopStatus(msg,YourMessage,work=0){
+      function ShopStatus(YourMessage,work=0){
      var msg=msg;
      var work=work;
      var act ="<b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(0, 100, 255);>\">Today Open</span><span style=\"color:rgb(0, 206, 0);\"><b> !!</b></span>";
@@ -24,11 +8,11 @@
      var hour   = date_obj.getHours();
      var minute = date_obj.getMinutes();
      var ampm=(hr > 11) ? 'PM' : 'AM';
-     if(work == 1){
-        var Nmsg=msg;
-        var Newmsg="<b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(255, 0, 29);\">"+Nmsg+"<br/>"+YourMessage+"</span><span style=\"color:red;\"></span>";
+     if(work === 1){
+        var Newmsg="<b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(255, 0, 29);\">"+YourMessage+"</span><span style=\"color:red;\"></span>";
         document.write(Newmsg);
-}else if(hr>11){
+}else{
+	if(hr>11){
 	hr-=12;
 }else if(hr==0){
 	hr=12;
@@ -39,5 +23,6 @@
 	document.write(act);
 }else{
 	document.write(unact);
+}
 }
 //]]>
