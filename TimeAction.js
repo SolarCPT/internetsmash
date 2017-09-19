@@ -10,14 +10,14 @@ if(w==1){
 document.write(msg);
 }if(hr>11){
 	hr-=12;
-else if(hr==0){
+}else if(hr==0){
 	hr=12;	
 	document.write(unact);
 }else if(ampm === "PM" && hr < 7 ){
 	document.write(act);
+}else if(ampm === "AM" && hr > 8){
+	document.write(act);
 }else if(ampm === "AM" && hr < 9){
 	document.write(unact);
-}else {
-	document.write(act);
 }
 }
