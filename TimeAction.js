@@ -23,21 +23,22 @@
      var date_obj = new Date();
      var hour   = date_obj.getHours();
      var minute = date_obj.getMinutes();
-     var amPM   = (hour <= 11) ? "am" : "pm";
+     var ampm=(hr > 11) ? 'PM' : 'AM';
      if(work == 1){
         var Nmsg=msg;
         var Newmsg="<b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(255, 0, 29);\">"+Nmsg+"<br/>"+YourMessage+"</span><span style=\"color:red;\"></span>";
         document.write(Newmsg);
-     }else{
-     if(hour > 11) {
-     hour -= 12;
-     }if(hour == 0){
-      hour = "12";
-     }else if(amPM =="am" && hour > 8){
-     document.write(act);
-     }else if(amPM == "pm" && hour > 6){
-     document.write(unact);
      }
-      
-     }
+if(hr>11){
+	hr-=12;
+}else if(hr==0){
+	hr=12;
+	document.write(unact);
+}else if(ampm === "PM" && hr < 7 ){
+	document.write(act);
+}else if(ampm === "AM" && hr > 8){
+	document.write(act);
+}else{
+	document.write(unact);
+}
 //]]>
