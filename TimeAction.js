@@ -9,8 +9,10 @@ var ampm=(hr > 11) ? 'PM' : 'AM';
 if(work === 1){
         var Newmsg="<b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(255, 0, 29);\">"+YourMessage+"</span><span style=\"color:red;\"></span>";
         document.write(Newmsg);
-}else{
-	if(hr==0){
+}
+if(hr>11){
+	hr-=12;
+if(hr==0){
 	hr=12;
 	document.write(unact);
 }else if(ampm === "PM" && hr < 7 ){
