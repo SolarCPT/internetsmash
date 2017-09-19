@@ -28,8 +28,7 @@
         var Nmsg=msg;
         var Newmsg="<b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(255, 0, 29);\">"+Nmsg+"<br/>"+YourMessage+"</span><span style=\"color:red;\"></span>";
         document.write(Newmsg);
-     }
-if(hr>11){
+}else if(hr>11){
 	hr-=12;
 }else if(hr==0){
 	hr=12;
