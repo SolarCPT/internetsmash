@@ -8,7 +8,7 @@ var unact ="<b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span styl
 msg ="<b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(255, 0, 29);\">"+msg+"</span><span style=\"color:red;\"><b> !!</b></span>";
 if(w==1){
 document.write(msg);
-}if(hr>11){
+}if(hr>12){
 	hr-=12;
 }else if(hr==0){
 	hr=12;	
@@ -19,5 +19,7 @@ document.write(msg);
 	document.write(act);
 }else if(ampm === "AM" && hr < 9){
 	document.write(unact);
+}else if(ampm === "PM" && hr === 12){
+	document.write(act);
 }
 }
