@@ -6,9 +6,9 @@ function ShopStatus(msg,w= '0'){
         var result  = hour;
         var ext     = '';
         var sta     = '';
-        var act ="<b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(0, 100, 255);>\">Today Open</span><span style=\"color:green;font-size:25px;margin-top:20px;\">&nbsp;&#2705;</span>";
-        var unact ="<b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(255, 0, 29);\">Now Closed</span><span style=\"color:#ff0000;font-size:40px;margin-top:20px;\">&nbsp;&#9940;</span>";
-        var msg ="<b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(255, 0, 29);\">"+msg+"</span><span style=\"color:red;\">&nbsp;&nbsp;&#9940;</span>";
+        var act ="<p><b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(0, 100, 255);>\">Today Open</span><span style=\"font-size:25px;margin-top:20px;\">&nbsp;&#9989;</span></p>";
+        var unact ="<p><b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(255, 0, 29);\">Now Closed</span><span style=\"color:#ff0000;font-size:40px;margin-top:20px;\">&nbsp;&#9940;</span></p>";
+        var msg ="<p><b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(255, 0, 29);\">"+msg+"</span><span style=\"color:red;\">&nbsp;&nbsp;&#9940;</span></p>";
          if(w==1){
             document.write(msg);
         }else{
