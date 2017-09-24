@@ -1,7 +1,7 @@
 function ShopStatus(msg,w= '0'){
         var date_format = '12'; /* FORMAT CAN BE 12 hour (12) OR 24 hour (24)*/
         var d       = new Date();
-        var hour    =8; //d.getHours();  /* Returns the hour (from 0-23) */
+        var hour    =9; //d.getHours();  /* Returns the hour (from 0-23) */
         var minutes     = d.getMinutes();  /* Returns the minutes (from 0-59) */
         var result  = hour;
         var ext     = '';
