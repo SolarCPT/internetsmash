@@ -1,36 +1,64 @@
-function ShopStatus(msg,w="0"){
-	var msg = msg;
-	day = new Date();
-	hr = day.getHours();
-	var hrs ="";
-	var ampm="";
-	if(hr>12 || hr ==0){
-		hrs=24;
-	}else{
-		hrs=12;
-	}
-	var act ="<b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(0, 100, 255);>\">Today Open</span><span style=\"color:rgb(0, 206, 0);\"><b> !!</b></span>";
-	var unact ="<b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(255, 0, 29);\">Now Closed</span><span style=\"color:red;\"><b> !!</b></span>";
-	msg ="<b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(255, 0, 29);\">"+msg+"</span><span style=\"color:red;\"><b> !!</b></span>";
-	if(w==1){
+
+function ShopStatus(msg,w= '0'){
+
+var date_format = '12'; /* FORMAT CAN BE 12 hour (12) OR 24 hour (24)*/
+
+
+var d       = new Date();
+var hour    = d.getHours();  /* Returns the hour (from 0-23) */
+var minutes     = d.getMinutes();  /* Returns the minutes (from 0-59) */
+var result  = hour;
+var ext     = '';
+var sta     = '';
+
+var act ="<b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(0, 100, 255);>\">Today Open</span><span style=\"color:rgb(0, 206, 0);\"><b> !!</b></span>";
+
+var unact ="<b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(255, 0, 29);\">Now Closed</span><span style=\"color:red;\"><b> !!</b></span>";
+   
+
+var msg ="<b>STATUS</b><span style=\"color:red;\"><b> :: </b></span><span style=\"color:rgb(255, 0, 29);\">"+msg+"</span><span style=\"color:red;\"><b> !!</b></span>";
+
+if(w==1){
 		document.write(msg);
 	}else{
-		if(hrs==24){
-			hr-=12;
-			ampm = "PM";
-		if(ampm=="PM" && hr<7){
-			 document.write(act);
-		}else if(ampm=="PM" && hr>6{
-			document.write(unact);
-		}
-	}else if(hrs==12){
-			ampm="AM";
-			hr=hr;
-		if(ampm=="AM" && hr>8){
-			document.write(act);
-		}else if(ampm=="AM" && hr< 9{{
-			document.write(unact);
-		}
-	}
+if(date_format == '12'){
+    if(hour > 12){
+        ext = 'PM';
+        hour = (hour - 12);
+        if(hour < 10){
+           result = "0" + hour;
+        }else if(hour == 12){
+            hour = "00";
+            ext = 'AM';
+            sta = act;
+        }
+    if(hour<7){
+        sta = act;
+    }else{
+        sta = unact;
+     }
+    }
+    else if(hour < 12){
+      result = ((hour < 10) ? "0" +          hour : hour);
+        ext = 'AM'; 
+    if(hour<9){
+        sta = unact;
+    }else{
+        sta = act;
+}
+          
+    }else if(hour == 12){
+        ext = 'PM';
+        sta = act;
     }
 }
+
+if(minutes < 10){
+    minutes = "0" + minutes; 
+}
+result = sta; 
+
+document.write(' <b>' +result+ '</b>');
+}
+
+};
